@@ -1,0 +1,55 @@
+name: Request a Tender Radar sample
+description: Ask MojoBeep for a niche EU procurement sample.
+title: "Tender Radar sample: "
+labels:
+  - tender-radar
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request a small sample of EU procurement notices for one niche.
+        Do not include private credentials, payment details, or confidential bid information.
+  - type: input
+    id: company
+    attributes:
+      label: Company or team
+      description: Public company/team name only.
+      placeholder: Example GmbH
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country or region
+      description: Country/region to monitor.
+      placeholder: Germany, EU-wide, DACH
+    validations:
+      required: true
+  - type: dropdown
+    id: segment
+    attributes:
+      label: Segment
+      options:
+        - Software / SaaS
+        - Cybersecurity
+        - AI / data
+        - Cloud / infrastructure
+        - Public administration IT
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: keywords
+    attributes:
+      label: Keywords
+      description: A few procurement terms to track.
+      placeholder: managed SOC, e-government, data platform
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Optional public context about what should be included or excluded.
+    validations:
+      required: false
